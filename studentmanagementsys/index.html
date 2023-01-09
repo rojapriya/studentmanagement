@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Title-->
+    <title>student</title>
+     <!-- CSS File-->
+    <link rel="stylesheet" href="stu.css/style.css">
+    
+ 
+</head>
+<body>
+	<CENTER><h2>Student Management System</h2></CENTER>
+    <!--Table-->
+    <table>
+        <!--Row-1-->
+        <tr>
+            <!--Column-1-->
+            <td>
+                <!--Form-->
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                	<h3>Student Details</h3>
+                  <!--div-1-->
+                    <div>
+                        <label>First Name</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="userNamevalidationError">This field is required</label>
+                        <!--Input User Name-->
+                        <input type="text" name="firstname" id="firstname" placeholder="Enter the firstname">
+                     <label>Last Name</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Enter the lastname">
+
+<!--div-4-->
+                    <div>
+                        <label>Location</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="locationvalidationError" >This field is required</label>
+                        <!--Input Roll No-->
+                        <input type="text" name="location" id="location" placeholder="Enter the location">
+                    </div>
+                    <!--div-5-->
+
+                    <div>
+                        <label>Email</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="emailvalidationError">This field is required</label>
+                       <!--Input Student Class-->
+                        <input type="text" name="email" id="email" placeholder="Enter the email">
+                    </div>
+                    <!--div-6-->
+                    <div>
+                        <label>DOB</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="dobvalidationError">This field is required</label>
+                        <!--Input Total Subject-->
+                        <input type="date" name="dob" id="dob" placeholder="Enter the dob">
+                    </div>
+                    <!--div-7-->
+                    <div>
+                        <label>Education</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="eduvalidationError">This field is required</label>
+                        <!--Input Age-->
+                        <input type="text" size="10" name="edu" id="edu" placeholder="Enter the education">
+                    </div>
+                    <!--div-8-->
+                    <div>
+                        <label>About</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="eduvalidationError">This field is required</label>
+                        <!--Input Age-->
+                        <input type="text"  name="about" id="about" placeholder="Optional"warp>
+                    </div>
+
+                    <!--div-9-->
+                    <div class="form-action-buttons">
+                        <!--Input Button-->
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <!--Column-2-->
+            <td>
+                <!--Nested Table-->
+                <table class="list" id="stdlist" style="background-color: #6db2c2;">
+                    <!--Table Head-->
+                    <thead>
+                        <!--Row-2-->
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Location</th>
+                            <th>Email</th>
+                            <th>DOB</th>
+                            <th>Education</th>
+                            <th>Action & Delete</th>
+                            
+                            <span style="float:right"><button id="but_add">Add New Row</button></span></th>
+                            <script>
+                                $('#stdlist').SetEditable({ $addButton: $('#but_add')});
+                               </script>
+                        </tr>
+                    </thead>
+                    <!--Table Body-->
+                    <tbody>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- JS File-->
+    <script src="stu.JS/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
